@@ -9,7 +9,7 @@ class Note < ActiveRecord::Base
 end
 
 get "/welcome" do
-	"welcome"
+	"welcome to autofi"
 end
 
 get "/" do
