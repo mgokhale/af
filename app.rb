@@ -6,6 +6,9 @@ require './environments'
 require 'plaid'
 require "awesome_print"
 
+#Settings
+set :public_folder, 'public'
+
 class Note < ActiveRecord::Base
 end
 
