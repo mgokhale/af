@@ -1,0 +1,9 @@
+<ul>
+<% @notes.each do |note| %>
+ <li>
+   <h4><a href="/notes/<%= note.id %>"><%= note.title %></a></h4>
+   <%= note.body %>
+   <p>Created: <%= note.created_at %></p>
+ </li>
+<% end %>
+</ul>
