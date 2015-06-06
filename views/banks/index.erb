@@ -1,0 +1,8 @@
+<ul>
+<% @banks.each do |bank| %>
+ <li>
+   <h4><a href="/banks/<%= bank.id %>"><%= bank.name %></a></h4>
+   MFA : <%= bank.has_mfa %>
+ </li>
+<% end %>
+</ul>

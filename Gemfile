@@ -6,13 +6,9 @@ gem "activerecord"
 gem "sinatra-activerecord"
 gem 'sinatra-flash'
 gem 'sinatra-redirect-with-flash'
+gem 'plaid'
+gem 'awesome_print'
 
-# group :development do
- # gem 'sqlite3'
- # gem "tux"
- # gem 'pg'
-# end
-
-group :production do
+group :production, :development do
  gem 'pg'
 end
