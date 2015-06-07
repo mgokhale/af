@@ -72,10 +72,10 @@ get '/accounts' do
   exchange_token_response = Plaid.exchange_token(public_token)
 
   # Initialize a Plaid user
-  user = Plaid.set_user(exchange_token_response.access_token, ['connect'])
+  user = Plaid.set_user(exchange_token_response.access_token, ['auth'])
 
   # Retrieve information about the user's accounts
-  user.get('connect')
+  user.get('auth')
 
   # Transform each account object to a simple hash
   transformed_accounts = user.accounts.map do |account|
@@ -91,5 +91,6 @@ get '/accounts' do
 
   # Return the account data as a JSON response
   content_type :json
-  { accounts: transformed_accounts, txns: user.transactions }.to_json
+  { accounts: transformed_accounts }.to_json
+  # { accounts: transformed_accounts, txns: user.transactions }.to_json
 end

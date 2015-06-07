@@ -27,7 +27,7 @@
     var sandboxHandler = Plaid.create({
       clientName: 'AutoFi',
       env: 'tartan',
-      product: 'auth',
+      product: 'auth ',
       key: 'test_key',
       onSuccess: function(token) {
         window.location = '/accounts.html?public_token=' + token;
