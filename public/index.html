@@ -9,8 +9,9 @@
 </head>
 <body>
   <div class="container">
-    <a href="/"><div class="logo">AutoFi</div></a>
-    <h2>AutoFi : Connect your bank account and get an auto-loan in 30 seconds. No paperwork required</h2>
+    <!-- <a href="/"><div class="logo">AutoFi</div></a> -->
+    <a href="/"><div class="logo"><img src="//res.cloudinary.com/hrscywv4p/image/upload/c_limit,f_auto,h_1440,q_80,w_720/v1/42458/autofi_ilkegc.png" alt="" class="lazy-img" data-original="//res.cloudinary.com/hrscywv4p/image/upload/c_limit,f_auto,h_1440,q_80,w_720/v1/42458/autofi_ilkegc.png" title="" style="position: center; "></div></a>
+    <h2>Connect your bank account and get approved for an auto-loan in 30 seconds.</h2>
     <div class="dual-button">
       <div>
         <span class="radio-button radio-left" id="sandboxLinkButton">Sandbox Mode</span>
@@ -27,7 +28,7 @@
     var sandboxHandler = Plaid.create({
       clientName: 'AutoFi',
       env: 'tartan',
-      product: 'auth ',
+      product: 'auth',
       key: 'test_key',
       onSuccess: function(token) {
         window.location = '/accounts.html?public_token=' + token;
