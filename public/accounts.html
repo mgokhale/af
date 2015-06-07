@@ -26,11 +26,15 @@
 
 <body class="accounts">
   <div class="container">
-    <a href="https://autofi.herokuapp.com/"><div class="logo">AutoFi</div></a>
+    <a href="/"><div class="logo">AutoFi</div></a>
     <h2 id='title'>Your accounts</h2>
     <div class="sum-total account-item">
       <h1 id='your-sum'></h1>
       <span>Your Sum</span>
+    </div>
+    <div class="txns-total account-item">
+      <h1 id='your-txns'></h1>
+      <span>Your Txns</span>
     </div>
     <div id='account-items'>
     </div>
@@ -72,6 +76,7 @@
         // Append the accounts to the body
         $('#account-items').append(renderedAccounts);
         $('#your-sum').text('$' + sum.toFixed(2));
+        $('#your-txns').text('#' + data.txns.length);
       } else {
         // Show a simple error message - the request failed.
         showError();
